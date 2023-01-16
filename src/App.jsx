@@ -4,7 +4,7 @@ import './App.css'
 import Card from "./components/Card";
 
 function App() {
-  return <Card />
+  return <Card title="Test" description="and Vite"/>
 }
 
 export default App

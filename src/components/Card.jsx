@@ -1,8 +1,8 @@
-function Card() {
+function Card({title = "Default title", description= "Desc"}) {
     return (
         <div>
-            <h1>Title</h1>
-            <p>Description</p>
+            <h1>{title}</h1>
+            <p>{description}</p>
         </div>
     )
 }
