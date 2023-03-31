@@ -1,14 +1,7 @@
 
 function Card({title = "Default title", description= "Desc", children}) {
     function handleClick() {
-        alert(double(2));
-    }
-
-    function double(number) {
-        let extraNumber = 0;
-        extraNumber++;
-        const result = number * 2 + extraNumber;
-        return result;
+        alert("Test");
     }
 
     return (
