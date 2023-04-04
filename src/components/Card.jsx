@@ -1,5 +1,5 @@
 
-function Card({title = "Default title", description= "Desc", children}) {
+function Card({title = "Default title", description= "Desc"}) {
     function handleClick() {
         alert("Test");
     }
