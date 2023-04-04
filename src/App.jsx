@@ -1,10 +1,15 @@
-import './App.css'
-import Card from "./components/Card";
+import './App.css';
+import Card from './components/Card';
+import { videos } from './video-data';
 
 function App() {
   return (
-    <Card title="Test" />
+    <>
+      {videos.map((video) => (
+        <Card key={video.id} title={video.title} description={video.description} />
+      ))}
+    </>
   );
 }
 
-export default App
+export default App;
