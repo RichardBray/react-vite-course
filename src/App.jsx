@@ -1,12 +1,15 @@
+import { lazy } from 'react';
 import './App.css';
 import Card from './components/Card';
+// import Details from './components/Details';
 import { videos } from './video-data';
 
-function App() {
-  const hasMoney = true;
-  hasMoney ? console.log("I'm rich") : console.log("I'm poor");
+const Details = lazy(() => import('./components/Details'));
 
-  return (
+function App() {
+  const showDetails = false;
+
+  return showDetails ? <Details /> : (
     <>
       {videos.map((video) => (
         <Card key={video.id} video={video} />
@@ -16,11 +19,3 @@ function App() {
 }
 
 export default App;
-
-const multiplier = 113;
-function isYen(dollars) {
-  return dollars * multiplier;
-}
-
-
-isYen(5)
