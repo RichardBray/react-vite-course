@@ -9,8 +9,6 @@ const Details = lazy(() => {
 });
 
 function App() {
-  const showDetails = true;
-
   return (
     <>
       <ErrorBoundary fallback={<div>Something's gone wrong :(</div>}>
