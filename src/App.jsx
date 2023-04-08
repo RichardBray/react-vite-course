@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import './App.css';
 import Card from './components/Card';
+import { videos } from './video-data.js';
 
 function App() {
   return (
