@@ -1,15 +1,15 @@
 import Card from './components/Card';
 import { videos } from './video-data.js';
-import './App.css';
+import styles from './App.module.css'
 
 function App() {
-  const darkMode = false;
-  const styles = darkMode
-    ? 'dark-mode'
-    : 'light-mode';
+  const darkMode = true;
+  const darkModeClass = darkMode
+    ? styles['dark-mode']
+    : styles['light-mode'];
 
   return (
-    <div className={`wrapper ${styles}`}>
+    <div className={`${styles.wrapper} ${darkModeClass}`}>
       {videos.map((video) => (
         <Card key={video.id} video={video} />
       ))}
