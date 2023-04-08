@@ -1,0 +1,15 @@
+.wrapper {
+  color: black;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.light-mode {
+  color: black;
+  background-color: white;
+}
+
+.dark-mode {
+  color: white;
+  background-color: black;
+}
