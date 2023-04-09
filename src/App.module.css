@@ -1,6 +1,9 @@
 .wrapper {
   color: black;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .light-mode {
@@ -10,5 +13,5 @@
 
 .dark-mode {
   color: white;
-  background-color: black;
+  background-color: rgba(68,70,84);
 }
