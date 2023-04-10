@@ -9,7 +9,9 @@ export default function Counter() {
 
   return (
     <>
-      <p>You clicked {count} times</p>
+      <div>You clicked {count} times</div>
+      <div>Count + 1: {count + 1}</div>
+      <div>Count + 2: {count + 2}</div>
       <button onClick={handleClick}>Click me</button>
     </>
   );
