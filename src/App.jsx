@@ -3,7 +3,7 @@ import { videos } from './video-data.js';
 import styles from './App.module.css'
 
 function App() {
-  const darkMode = true;
+  const darkMode = false;
   const darkModeClass = darkMode
     ? styles['dark-mode']
     : styles['light-mode'];
