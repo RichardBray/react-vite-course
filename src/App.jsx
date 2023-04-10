@@ -1,4 +1,4 @@
-import Card from './components/Card';
+import Counter from './components/Counter';
 import { videos } from './video-data.js';
 import styles from './App.module.css'
 
@@ -10,9 +10,7 @@ function App() {
 
   return (
     <div className={`${styles.wrapper} ${darkModeClass}`}>
-      {videos.map((video) => (
-        <Card key={video.id} video={video} />
-      ))}
+      <Counter />
     </div>
   );
 }
