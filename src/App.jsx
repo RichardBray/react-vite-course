@@ -1,5 +1,4 @@
 import Counter from './components/Counter';
-import { videos } from './video-data.js';
 import styles from './App.module.css'
 
 function App() {
