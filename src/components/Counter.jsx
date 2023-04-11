@@ -1,7 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Counter() {
   const [count, setCount] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    console.log('component has mounted')
+    setMounted(true)
+  }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      console.log('count incremented')
+    }
+    return () => console.log('component has unmounted');
+  }, [count]);
 
   function handleClick() {
     setCount((prevCount) => prevCount + 1);
