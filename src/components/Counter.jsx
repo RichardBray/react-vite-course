@@ -1,8 +1,9 @@
-import { useReducer } from 'react';
+import { useReducer, useContext } from 'react';
+import { CounterContext } from '../CounterContext';
 
 export default function Counter() {
   const initialState = { count: 0 };
-
+  const value = useContext(CounterContext);
   function counterReducer(state, action) {
     const actions = {
       increment: () => ({ count: state.count + 1 }),
@@ -17,6 +18,7 @@ export default function Counter() {
 
   return (
     <>
+      <div>{value}</div>
       <div>Count value: {state.count}</div>
       <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
       <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>

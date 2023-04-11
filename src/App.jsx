@@ -1,17 +1,19 @@
 import Counter from './components/Counter';
-import { videos } from './video-data.js';
-import styles from './App.module.css'
+import styles from './App.module.css';
+import { CounterProvider } from './CounterContext';
+import Details from './components/Details';
 
 function App() {
   const darkMode = true;
-  const darkModeClass = darkMode
-    ? styles['dark-mode']
-    : styles['light-mode'];
+  const darkModeClass = darkMode ? styles['dark-mode'] : styles['light-mode'];
 
   return (
-    <div className={`${styles.wrapper} ${darkModeClass}`}>
-      <Counter />
-    </div>
+    <CounterProvider>
+      <div className={`${styles.wrapper} ${darkModeClass}`}>
+        <Counter />
+        <Details />
+      </div>
+    </CounterProvider>
   );
 }
 
